@@ -11,8 +11,8 @@
       "pnpm install"
     ],
     "scripts": {
-      "chd-node": [
-        "pnpm run chd-oclif"
+      "chd": [
+        "pnpm run chd"
       ]
     }
   }
