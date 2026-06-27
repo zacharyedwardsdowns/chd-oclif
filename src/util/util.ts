@@ -13,12 +13,12 @@ export abstract class Util {
     static {
         // Set the user data directory based on the platform.
         if (process.platform === 'win32') {
-            this.userDataDir = `${process.env.APPDATA}\\chd-node`;
+            this.userDataDir = `${process.env.APPDATA}\\chd-oclif`;
         } else {
             this.userDataDir =
                 process.platform === 'darwin'
-                    ? `${process.env.HOME}/Library/Preferences/chd-node`
-                    : `${process.env.HOME}/.local/share/chd-node`;
+                    ? `${process.env.HOME}/Library/Preferences/chd-oclif`
+                    : `${process.env.HOME}/.local/share/chd-oclif`;
         }
 
         // Initialize list of existing commands.
