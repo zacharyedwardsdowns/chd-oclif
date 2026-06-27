@@ -1,0 +1,15 @@
+[tools]
+node = 'lts'
+pnpm = 'latest'
+
+[env]
+_.path = ['{{config_root}}/node_modules/.bin']
+
+[tasks.pnpm-install]
+run = 'pnpm install'
+sources = ['package.json', 'pnpm-lock.yaml', 'pnpm-workspace.yaml', 'mise.toml']
+outputs = ['node_modules/.pnpm/lock.yaml']
+
+[tasks.chd]
+run = 'node --run chd'
+depends = ['pnpm-install']
